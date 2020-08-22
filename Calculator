@@ -1,0 +1,40 @@
+#include <stdio.h>
+void askuser()
+{
+    printf("Enter two numbers\n");
+}
+int main()
+{
+    int op;
+    float a,b;
+    char option;
+    do{
+    printf("What operation do you wnat to perform?\n");
+    printf("Press 1 for Addition\nPress 2 for Subtraction\nPress 3 for Multiplication\nPress 4 for Division\n");
+    scanf("%d",&op);
+    askuser();
+    scanf("%f %f",&a,&b);
+    switch (op)
+        {
+        case 1:
+            printf("Addition is: %0.2f\n",a + b);
+            break;
+        case 2:
+            printf("Subtraction is: %0.2f\n",a - b);
+            break;
+        case 3:
+            printf("Multiplication is: %0.2f\n",a * b);
+            break;
+        case 4:
+            printf("Division is: %0.2f\n",a / b);
+            break;
+        default:
+            printf("Wrong input\n");
+            break;
+        }
+        printf("Do you want to continue (y/n)?\n");
+        scanf("\n");
+        scanf("%c",&option);
+    }while(option == 'y');
+    return 0;
+}
